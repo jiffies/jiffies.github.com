@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[蛇道]]></title>
+  <link href="http://jiffies.github.com/atom.xml" rel="self"/>
+  <link href="http://jiffies.github.com/"/>
+  <updated>2012-04-03T15:53:56+08:00</updated>
+  <id>http://jiffies.github.com/</id>
+  <author>
+    <name><![CDATA[jiffies]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[熟悉MarkDown]]></title>
+    <link href="http://jiffies.github.com/blog/2012/04/03/shou-xi-markdown/"/>
+    <updated>2012-04-03T15:40:00+08:00</updated>
+    <id>http://jiffies.github.com/blog/2012/04/03/shou-xi-markdown</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ubuntu建立桌面快捷方式]]></title>
+    <link href="http://jiffies.github.com/blog/2012/04/03/ubuntujian-li-zhuo-mian-kuai-jie-fang-shi/"/>
+    <updated>2012-04-03T11:22:00+08:00</updated>
+    <id>http://jiffies.github.com/blog/2012/04/03/ubuntujian-li-zhuo-mian-kuai-jie-fang-shi</id>
+    <content type="html"><![CDATA[<p>今天下载了sublime text2这个编辑器，想在桌面放一个快捷方式方便启动。一开始
+用了</p>
+
+<pre><code>ln -s /opt/Sublime/sunlime_text ～/桌面/sublime_text #注意要用绝对路径，路径中的空格要转义
+</code></pre>
+
+<p>建立了一个软链接放在桌面，满足了需求但是很图标很丑陋。</p>
+
+<p>于是换用第二种方法，使用启动器。在桌面建立一个文件名为sublime.desktop，编辑内容为：</p>
+
+<pre><code>[Desktop Entry]
+Version=1.0
+Type=Application
+Name=sublime
+Exec=/opt/Sublime/sublime_text
+Icon=/opt/Sublime/Icon/256*256/sublime_text.png
+</code></pre>
+
+<p>使用了sublime自带的图标，之后可能需要再设置一下运行权限。
+这样桌面就有了一个美观的快捷启动方式。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[开通了新博客]]></title>
+    <link href="http://jiffies.github.com/blog/2012/03/26/post-title/"/>
+    <updated>2012-03-26T21:29:00+08:00</updated>
+    <id>http://jiffies.github.com/blog/2012/03/26/post-title</id>
+    <content type="html"><![CDATA[<p>第一次用这种传说中hack的方式写博客，感觉不错，哈哈！</p>
+]]></content>
+  </entry>
+  
+</feed>

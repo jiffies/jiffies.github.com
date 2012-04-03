@@ -240,6 +240,17 @@ task :rsync do
   ok_failed system("rsync -avze 'ssh -p #{ssh_port}' #{exclude} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}")
 end
 
+desc "push source to git"
+task :push_source do
+	puts "## push source to git"
+	system "git add ."
+	puts "\n## Commiting: Site updated at #{Time.now.utc}"
+  message = "Site updated at #{Time.now.utc}"
+  system "git commit -m \"#{message}\""
+	puts "\n## git push orgin source"
+	system "git push origin source"
+end
+
 desc "deploy public directory to github pages"
 multitask :push do
   puts "## Deploying branch to Github Pages "

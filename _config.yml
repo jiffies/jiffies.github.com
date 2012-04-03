@@ -4,10 +4,10 @@
 
 url: http://jiffies.github.com
 title: 蛇道
-subtitle: Problem solver
+subtitle: 是的，就是龙珠里孙悟空跑过的那条路
 author: jiffies
 simple_search: http://google.com/search
-description: Focus on web development.Interested in ruby and rails.
+description: Use web to resolve problem.Believe the simplicity is meaningful.
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -89,8 +89,8 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
+disqus_short_name: jiffiesblog
+disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id:

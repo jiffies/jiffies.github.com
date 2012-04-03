@@ -4,7 +4,7 @@
   <title><![CDATA[蛇道]]></title>
   <link href="http://jiffies.github.com/atom.xml" rel="self"/>
   <link href="http://jiffies.github.com/"/>
-  <updated>2012-04-03T20:37:31+08:00</updated>
+  <updated>2012-04-04T02:43:18+08:00</updated>
   <id>http://jiffies.github.com/</id>
   <author>
     <name><![CDATA[jiffies]]></name>
@@ -14,11 +14,150 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Octopress体会]]></title>
+    <link href="http://jiffies.github.com/blog/2012/04/03/octopressti-hui/"/>
+    <updated>2012-04-03T22:51:00+08:00</updated>
+    <id>http://jiffies.github.com/blog/2012/04/03/octopressti-hui</id>
+    <content type="html"><![CDATA[<p>Octopress是一个基于Jekyll的静态站点生成程序，集成了一些插件，内建了几种站点的部署
+用gitpages尤其方便。</p>
+
+<p>在项目根目录<code>rake -T</code>查看当前支持的命令，就像以前通过make来了解一个C项目的脉络，阅读
+Rakefile也可以让你了解这个程序的布局，流程，组成等一些细节。</p>
+
+<p>通过<code>rake setup_github_pages[repo]</code>设置好与gitpages的连接之后，只需简单的
+使用<code>rake new_post[title]</code>和<code>rake gen_deploy</code>就能将博客发布到gitpage上。
+如果要先在本地审查的话，可以先用<code>rake generate</code>再<code>rake preview</code>会在本地的4000端口开一个服务器，当检查完毕
+确认之后再<code>rake deploy</code>上传即可</p>
+
+<p>项目默认在根目录下是source分支，同步到git的source分支，在_deploy下是master分支，
+将生成的静态站点上传到远程项目的master分支用于显示。</p>
+
+<p>sass和source/_includes/下的custom目录都是用来自定义的。当<code>rake install[theme]</code>新主题
+时，使用<code>rake update_source[theme]</code>和<code>rake update_style[theme]</code>会拷贝回这些自定义的内容直接应用到新主题。</p>
+
+<p>项目所支持的rake command都是管理master分支的，source分支需要自己手动push。</p>
+
+<p>如果要在另一台机器上写博客，可以先<code>git clone -b source git@github.com:name/name.github.com.git</code>
+再<code>rake setup_github_pages[repo]</code>即可。</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[熟悉MarkDown]]></title>
     <link href="http://jiffies.github.com/blog/2012/04/03/shou-xi-markdown/"/>
     <updated>2012-04-03T15:40:00+08:00</updated>
     <id>http://jiffies.github.com/blog/2012/04/03/shou-xi-markdown</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>Markdown是一种用来简化HTML撰写的语法，使用它能够快速的实现常用的HTML元素。<br/>
+octopress默认使用这种格式。</p>
+
+<h2>标题</h2>
+
+<p>两种方式</p>
+
+<pre><code>First level
+============
+Second level
+--------------
+</code></pre>
+
+<p>或者</p>
+
+<pre><code># &lt;h1&gt;
+## &lt;h2&gt;
+...
+###### &lt;h6&gt;
+</code></pre>
+
+<p>会显示成这样：</p>
+
+<h1>First level</h1>
+
+<h2>Second level</h2>
+
+<h1>h1</h1>
+
+<h2>h2</h2>
+
+<p>&#8230;</p>
+
+<h6>h6</h6>
+
+<pre><code>*强调*
+**strong**
+</code></pre>
+
+<p>like this:</p>
+
+<p><em>强调</em>
+<strong>strong</strong></p>
+
+<h2>列表</h2>
+
+<pre><code>* 蜘蛛侠
+* 蝙蝠侠
+* 绿灯侠
+1. 邪恶博士
+1. 企鹅人
+1. 这个不知道
+</code></pre>
+
+<ul>
+<li>蜘蛛侠</li>
+<li>蝙蝠侠</li>
+<li>绿灯侠</li>
+</ul>
+
+
+<hr />
+
+<ol>
+<li>邪恶博士</li>
+<li>企鹅人</li>
+<li>这个不知道</li>
+</ol>
+
+
+<h2>链接</h2>
+
+<pre><code>这是一个[大美妞哦](http://meinv.com)
+</code></pre>
+
+<p>or</p>
+
+<pre><code>我用了这个[东东][1]一次,[东东][1]两次，[东东][1]三次。。。
+[1]: http://dongdong.com
+</code></pre>
+
+<p>这是一个<a href="http://meinv.com">大美妞哦</a></p>
+
+<p>or</p>
+
+<p>我用了这个<a href="http://dongdong.com">东东</a>一次,<a href="http://dongdong.com">东东</a>两次，<a href="http://dongdong.com">东东</a>三次。。。</p>
+
+<h2>图片</h2>
+
+<pre><code>![Markdown](http://www.youapp.cn/data/attachment/forum/201204/01/112904r6kk06zepluql7k6.jpg)
+</code></pre>
+
+<p>like this:</p>
+
+<p><img src="http://www.youapp.cn/data/attachment/forum/201204/01/112904r6kk06zepluql7k6.jpg" alt="Markdown" /></p>
+
+<h2>代码</h2>
+
+<p>单行</p>
+
+<pre><code>输入`mkdir dir`
+</code></pre>
+
+<p>输入<code>mkdir dir</code></p>
+
+<p>代码快直接缩进4空格或者一个tab</p>
+
+<h2>注意</h2>
+
+<p>如果想在一个paragraph中加入<code>&lt;br /&gt;</code>，只需在一行后面加两个<br/>
+以上的空格即可。</p>
 ]]></content>
   </entry>
   

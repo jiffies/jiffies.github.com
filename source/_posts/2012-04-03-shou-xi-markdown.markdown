@@ -5,7 +5,7 @@ date: 2012-04-03 15:40
 comments: true
 categories: 
 ---
-Markdown是一种用来简化HTML撰写的语法，使用它能够快速的实现常用的HTML元素。
+Markdown是一种用来简化HTML撰写的语法，使用它能够快速的实现常用的HTML元素。  
 octopress默认使用这种格式。
 ##标题
 两种方式
@@ -76,7 +76,9 @@ like this:
 输入`mkdir dir`
 
 代码快直接缩进4空格或者一个tab
-
+##注意
+如果想在一个paragraph中加入`<br />`，只需在一行后面加两个  
+以上的空格即可。
 
 
 

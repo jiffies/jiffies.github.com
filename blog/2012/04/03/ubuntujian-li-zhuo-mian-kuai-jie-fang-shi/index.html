@@ -1,55 +1,88 @@
 
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-    <title>ubuntu建立桌面快捷方式 - 蛇道</title>
-    <meta name="author" content="jiffies">
+  <meta charset="utf-8">
+  <title>ubuntu建立桌面快捷方式 - 蛇道</title>
+  <meta name="author" content="jiffies">
 
-    
-    <meta name="description" content="Ubuntu建立桌面快捷方式 今天下载了sublime text2这个编辑器，想在桌面放一个快捷方式方便启动。一开始
-用了 ln -s /opt/Sublime/sunlime_text ～/桌面/sublime_text #注意要用绝对路径，路径中的空格要转义 建立了一个软链接放在桌面， &hellip;">
-    
-    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+  
+  <meta name="description" content="今天下载了sublime text2这个编辑器，想在桌面放一个快捷方式方便启动。一开始
+用了 ln -s /opt/Sublime/sunlime_text ～/桌面/sublime_text #注意要用绝对路径，路径中的空格要转义 建立了一个软链接放在桌面，满足了需求但是很图标很丑陋。 &hellip;">
+  
 
-    <link href="/atom.xml" rel="alternate" title="蛇道" type="application/atom+xml">
-    <link rel="canonical" href="">
-    <link href="/favicon.png" rel="shortcut icon">
-    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    
-    
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://jiffies.github.com/blog/2012/04/03/ubuntujian-li-zhuo-mian-kuai-jie-fang-shi">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="蛇道" type="application/atom+xml">
+  
+  
 
 </head>
 
-<body>
-	<header class="inner"><h1 class="left"><a href="/">蛇道</a></h1>
-<nav class="menu left"><ul class="main">
+<body   >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:jiffies.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main">
 	<li><a href="/">Blog</a></li>
 	<li><a href="/blog/archives">Archives</a></li>
 </ul>
+
 </nav>
-<div class="right">
-	<form class="search right" action="http://google.com/search" method="get">
-		<input class="left" type="text" name="q" results="0">
-		<input type="hidden" name="q" value="site:jiffies.github.com">
-	</form>
-	<div class="social right">
-		
-		
-		
-		
-		
-		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
-		
-	</div>
-</div>
-</header>
-	
-	<div id="content" class="inner"><article class="post">
-    <h1 class="title">Ubuntu建立桌面快捷方式</h1>
-    <div class="entry"><p>今天下载了sublime text2这个编辑器，想在桌面放一个快捷方式方便启动。一开始
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Ubuntu建立桌面快捷方式</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-03T11:22:00+08:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>今天下载了sublime text2这个编辑器，想在桌面放一个快捷方式方便启动。一开始
 用了</p>
 
 <pre><code>ln -s /opt/Sublime/sunlime_text ～/桌面/sublime_text #注意要用绝对路径，路径中的空格要转义
@@ -70,8 +103,16 @@ Icon=/opt/Sublime/Icon/256*256/sublime_text.png
 <p>使用了sublime自带的图标，之后可能需要再设置一下运行权限。
 这样桌面就有了一个美观的快捷启动方式。</p>
 </div>
-    <div class="meta">
-        <div class="date">
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">jiffies</span></span>
+
+      
 
 
 
@@ -83,28 +124,85 @@ Icon=/opt/Sublime/Icon/256*256/sublime_text.png
   
 
 
-<time datetime="2012-04-03T11:22:00+08:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2012</time></div>
-        <div class="tags">
+<time datetime="2012-04-03T11:22:00+08:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jiffies.github.com/blog/2012/04/03/ubuntujian-li-zhuo-mian-kuai-jie-fang-shi/" data-via="" data-counturl="http://jiffies.github.com/blog/2012/04/03/ubuntujian-li-zhuo-mian-kuai-jie-fang-shi/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/03/26/post-title/" title="Previous Post: 开通了新博客">&laquo; 开通了新博客</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/04/03/shou-xi-markdown/" title="Next Post: 熟悉MarkDown">熟悉MarkDown &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
 
 </div>
-        
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/04/03/shou-xi-markdown/">熟悉MarkDown</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/04/03/ubuntujian-li-zhuo-mian-kuai-jie-fang-shi/">ubuntu建立桌面快捷方式</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/26/post-title/">开通了新博客</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+
+  
+</aside>
+
+
     </div>
-</article>
-<div class="share">
-	<div class="addthis_toolbox addthis_default_style ">
-	
-	
-	<a class="addthis_button_tweet"></a>
-	
-	
-	<a class="addthis_counter addthis_pill_style"></a>
-	</div>
-	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4eb4a0c47196e907"></script>
-</div>
-</div>
-	<footer class="inner">Copyright &copy; 2012 蛇道</footer>
-	<script src="/javascripts/jquery.fancybox.pack.js"></script>
-<script src="/javascripts/slash.js"></script>
+  </div>
+  <footer role="contentinfo">Copyright &copy; 2012 蛇道
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
 
 
 

@@ -1,0 +1,147 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ruby的变量与方法 - 蛇道</title>
+    <meta name="author" content="jiffies">
+
+    
+    <meta name="description" content="Ruby的变量与方法 calss foo def some_behavior_on(string) string.upcase #向另一个对象发送消息 end def some_behavior another_behavior #隐式向自己发送消息, &hellip;">
+    
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="蛇道" type="application/atom+xml">
+    <link rel="canonical" href="">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    
+    
+
+</head>
+
+<body>
+	<header class="inner"><h1 class="left"><a href="/">蛇道</a></h1>
+<nav class="menu left"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<div class="right">
+	<form class="search right" action="http://google.com/search" method="get">
+		<input class="left" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:jiffies.github.com">
+	</form>
+	<div class="social right">
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</div>
+</header>
+	
+	<div id="content" class="inner"><article class="post">
+    <h1 class="title">Ruby的变量与方法</h1>
+    <div class="entry"><pre><code>calss foo
+    def some_behavior_on(string)
+        string.upcase #向另一个对象发送消息
+    end
+
+    def some_behavior
+        another_behavior #隐式向自己发送消息,调用的额也是实例方法another_behavior
+    end
+
+    def another_behavior
+    end
+
+    def self_behavior
+        self.another_behavior #显式向self自己发送消息,调用的是实例方法another_behavior
+    end
+
+    def self.bar
+        fun #消息发送给类对象本身，即调用self.fun
+    end
+
+    def self.fun
+    end
+end
+</code></pre>
+
+<h3>类方法和实例方法</h3>
+
+<p>以self.开头的是类方法，该方法属于这个类本身，接受这个方法消息的是类对象。
+其他的方法属于实例方法，属于该类的实例，接受消息的是该类实例。
+而在方法体中的self视情况代表不同的对象，类方法中代表类本身，实例方法中代
+表该类实例本身，所以在隐式发送消息时就是发送给不同的对象。</p>
+</div>
+    <div class="meta">
+        <div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-08T23:38:00+08:00" pubdate data-updated="true">Apr 8<span>th</span>, 2012</time></div>
+        <div class="tags">
+
+</div>
+        
+        <span class="comments"><a href="#disqus_thread">Comments</a></span>
+        
+    </div>
+</article>
+<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4eb4a0c47196e907"></script>
+</div>
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer class="inner">Copyright &copy; 2012 蛇道</footer>
+	<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script src="/javascripts/slash.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'jiffiesblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://jiffies.github.com/blog/2012/04/08/rubyde-bian-liang-yu-fang-fa/';
+        var disqus_url = 'http://jiffies.github.com/blog/2012/04/08/rubyde-bian-liang-yu-fang-fa/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+</body>
+</html>

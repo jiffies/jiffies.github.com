@@ -4,7 +4,7 @@
   <title><![CDATA[蛇道]]></title>
   <link href="http://jiffies.github.com/atom.xml" rel="self"/>
   <link href="http://jiffies.github.com/"/>
-  <updated>2012-04-04T02:43:18+08:00</updated>
+  <updated>2012-04-09T00:22:51+08:00</updated>
   <id>http://jiffies.github.com/</id>
   <author>
     <name><![CDATA[jiffies]]></name>
@@ -12,6 +12,45 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ruby的变量与方法]]></title>
+    <link href="http://jiffies.github.com/blog/2012/04/08/rubyde-bian-liang-yu-fang-fa/"/>
+    <updated>2012-04-08T23:38:00+08:00</updated>
+    <id>http://jiffies.github.com/blog/2012/04/08/rubyde-bian-liang-yu-fang-fa</id>
+    <content type="html"><![CDATA[<pre><code>calss foo
+    def some_behavior_on(string)
+        string.upcase #向另一个对象发送消息
+    end
+
+    def some_behavior
+        another_behavior #隐式向自己发送消息,调用的额也是实例方法another_behavior
+    end
+
+    def another_behavior
+    end
+
+    def self_behavior
+        self.another_behavior #显式向self自己发送消息,调用的是实例方法another_behavior
+    end
+
+    def self.bar
+        fun #消息发送给类对象本身，即调用self.fun
+    end
+
+    def self.fun
+    end
+end
+</code></pre>
+
+<h3>类方法和实例方法</h3>
+
+<p>以self.开头的是类方法，该方法属于这个类本身，接受这个方法消息的是类对象。
+其他的方法属于实例方法，属于该类的实例，接受消息的是该类实例。
+而在方法体中的self视情况代表不同的对象，类方法中代表类本身，实例方法中代
+表该类实例本身，所以在隐式发送消息时就是发送给不同的对象。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octopress体会]]></title>

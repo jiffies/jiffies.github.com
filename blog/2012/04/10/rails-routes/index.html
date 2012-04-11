@@ -1,0 +1,140 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rails routes - 蛇道</title>
+    <meta name="author" content="jiffies">
+
+    
+    <meta name="description" content="Rails Routes 今天研究了一下Rails中的路由，刚接触Rails的时候，路由是一个大难题，
+包括它那充满magic的helper方法。
+Rails实践了RESTful的路由方式，将HTTP的动作映射为web资源的七种典型
+操作。
+在config/routes. &hellip;">
+    
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+
+    <link href="/atom.xml" rel="alternate" title="蛇道" type="application/atom+xml">
+    <link rel="canonical" href="">
+    <link href="/favicon.png" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    
+    
+
+</head>
+
+<body>
+	<header class="inner"><h1 class="left"><a href="/">蛇道</a></h1>
+<nav class="menu left"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<div class="right">
+	<form class="search right" action="http://google.com/search" method="get">
+		<input class="left" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:jiffies.github.com">
+	</form>
+	<div class="social right">
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</div>
+</header>
+	
+	<div id="content" class="inner"><article class="post">
+    <h1 class="title">Rails Routes</h1>
+    <div class="entry"><p>今天研究了一下Rails中的路由，刚接触Rails的时候，路由是一个大难题，<br/>
+包括它那充满magic的helper方法。
+Rails实践了RESTful的路由方式，将HTTP的动作映射为web资源的七种典型<br/>
+操作。
+在config/routes.rb中加上<code>resources :photos</code>代表这是一个典型的REST资 <br/>
+源。Rails自动产生相关的路由。
+<img src="images/r1.png" alt="自动产生的Routes" /></p>
+
+<p>index,new,create,show,edit,update,destroy是控制器中典型的七个action<br/>
+，HTTP动作和url路径的组合确定了由哪一个控制器及action处理请求。
+并且会产生相应的helper。</p>
+
+<pre><code>photos_path          #/photos
+new_photo_path       #/photos/new
+edit_photo_path(:id) #/photos/:id/edit
+photo_path(:id)          #/photos/:id
+</code></pre>
+
+<p>参数也可以是相应的对象本身，在link_to等helper中甚至可以直接使用对象<br/>
+&#8220;</p>
+</div>
+    <div class="meta">
+        <div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-10T00:42:00+08:00" pubdate data-updated="true">Apr 10<span>th</span>, 2012</time></div>
+        <div class="tags">
+
+</div>
+        
+        <span class="comments"><a href="#disqus_thread">Comments</a></span>
+        
+    </div>
+</article>
+<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4eb4a0c47196e907"></script>
+</div>
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer class="inner">Copyright &copy; 2012 蛇道</footer>
+	<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script src="/javascripts/slash.js"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'jiffiesblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://jiffies.github.com/blog/2012/04/10/rails-routes/';
+        var disqus_url = 'http://jiffies.github.com/blog/2012/04/10/rails-routes/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+</body>
+</html>

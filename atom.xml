@@ -4,7 +4,7 @@
   <title><![CDATA[蛇道]]></title>
   <link href="http://jiffies.github.com/atom.xml" rel="self"/>
   <link href="http://jiffies.github.com/"/>
-  <updated>2012-04-09T00:22:51+08:00</updated>
+  <updated>2012-04-11T22:32:33+08:00</updated>
   <id>http://jiffies.github.com/</id>
   <author>
     <name><![CDATA[jiffies]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[today]]></title>
+    <link href="http://jiffies.github.com/blog/2012/04/11/today/"/>
+    <updated>2012-04-11T22:31:00+08:00</updated>
+    <id>http://jiffies.github.com/blog/2012/04/11/today</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rails routes]]></title>
+    <link href="http://jiffies.github.com/blog/2012/04/10/rails-routes/"/>
+    <updated>2012-04-10T00:42:00+08:00</updated>
+    <id>http://jiffies.github.com/blog/2012/04/10/rails-routes</id>
+    <content type="html"><![CDATA[<p>今天研究了一下Rails中的路由，刚接触Rails的时候，路由是一个大难题，<br/>
+包括它那充满magic的helper方法。
+Rails实践了RESTful的路由方式，将HTTP的动作映射为web资源的七种典型<br/>
+操作。
+在config/routes.rb中加上<code>resources :photos</code>代表这是一个典型的REST资 <br/>
+源。Rails自动产生相关的路由。
+<img src="images/r1.png" alt="自动产生的Routes" /></p>
+
+<p>index,new,create,show,edit,update,destroy是控制器中典型的七个action<br/>
+，HTTP动作和url路径的组合确定了由哪一个控制器及action处理请求。
+并且会产生相应的helper。</p>
+
+<pre><code>photos_path          #/photos
+new_photo_path       #/photos/new
+edit_photo_path(:id) #/photos/:id/edit
+photo_path(:id)          #/photos/:id
+</code></pre>
+
+<p>参数也可以是相应的对象本身，在link_to等helper中甚至可以直接使用对象<br/>
+&#8220;</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ruby的变量与方法]]></title>

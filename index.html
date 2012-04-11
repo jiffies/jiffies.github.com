@@ -7,7 +7,9 @@
     <meta name="author" content="jiffies">
 
     
-    <meta name="description" content="Ruby的变量与方法 calss foo def some_behavior_on(string) string.upcase #向另一个对象发送消息 end def some_behavior another_behavior #隐式向自己发送消息, &hellip;">
+    <meta name="description" content="Today Apr 11th, 2012 Comments Rails Routes 今天研究了一下Rails中的路由，刚接触Rails的时候，路由是一个大难题，
+包括它那充满magic的helper方法。
+Rails实践了RESTful的路由方式，将HTTP的动作映射为web资源的七种典型 &hellip;">
     
     <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
 
@@ -47,6 +49,89 @@
 </header>
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+    <h1 class="title"><a href="/blog/2012/04/11/today/">Today</a></h1>
+    <div class="entry">
+        
+
+        
+        
+    </div>
+    <div class="meta">
+        <div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-11T22:31:00+08:00" pubdate data-updated="true">Apr 11<span>th</span>, 2012</time></div>
+        <div class="tags">
+
+</div>
+        
+        <span class="comments"><a href="/blog/2012/04/11/today/#disqus_thread">Comments</a></span>
+        
+    </div>
+</article>
+
+
+    <article class="post">
+    <h1 class="title"><a href="/blog/2012/04/10/rails-routes/">Rails Routes</a></h1>
+    <div class="entry">
+        <p>今天研究了一下Rails中的路由，刚接触Rails的时候，路由是一个大难题，<br/>
+包括它那充满magic的helper方法。
+Rails实践了RESTful的路由方式，将HTTP的动作映射为web资源的七种典型<br/>
+操作。
+在config/routes.rb中加上<code>resources :photos</code>代表这是一个典型的REST资 <br/>
+源。Rails自动产生相关的路由。
+<img src="images/r1.png" alt="自动产生的Routes" /></p>
+
+<p>index,new,create,show,edit,update,destroy是控制器中典型的七个action<br/>
+，HTTP动作和url路径的组合确定了由哪一个控制器及action处理请求。
+并且会产生相应的helper。</p>
+
+<pre><code>photos_path          #/photos
+new_photo_path       #/photos/new
+edit_photo_path(:id) #/photos/:id/edit
+photo_path(:id)          #/photos/:id
+</code></pre>
+
+<p>参数也可以是相应的对象本身，在link_to等helper中甚至可以直接使用对象<br/>
+&#8220;</p>
+
+        
+        
+    </div>
+    <div class="meta">
+        <div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-10T00:42:00+08:00" pubdate data-updated="true">Apr 10<span>th</span>, 2012</time></div>
+        <div class="tags">
+
+</div>
+        
+        <span class="comments"><a href="/blog/2012/04/10/rails-routes/#disqus_thread">Comments</a></span>
+        
+    </div>
+</article>
 
 
     <article class="post">
